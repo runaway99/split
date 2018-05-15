@@ -1,4 +1,13 @@
-<% @bills.each do |bill| %>
-<b><%= bill.name %></b>
-<%= bill.price %> <br>
-<% end %>
+<section class="summary">
+  <div class="summary__heading">
+    <h1 class="summary__title">Bill list</h1>
+  </div>
+
+  <ul class="summary__list">
+    <% @bills.each do |bill| %>
+    <li class="summary__item">
+      <%= render 'panel', bill: bill %>
+    </li>
+    <% end %>
+  </ul>
+</section>

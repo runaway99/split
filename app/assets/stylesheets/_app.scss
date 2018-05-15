@@ -1,0 +1,97 @@
+:root {
+  --blue-robbon: #1c4bfb;
+  --bright-turquoise: #28f1ab;
+  --alizarin-crimson: #d42027;
+
+  --port-gore: #191b44;
+  --alto: #d6d6d6;
+  --oslo-gray: #878f92;
+
+  --border-color: $blue-robbon;
+  --background: #f6f8f9;
+  --primary: #f2f2f2;
+  --white: white;
+
+  --accent: $blue-robbon;
+  --detail: $bright-turquoise;
+  --cancel: $alizarin-crimson;
+
+  --container-width: 800px;
+  --container-gutter: 30px;
+}
+
+// LAYOUT BREAKPOINTS
+// sm: 600px;
+// md: 768px;
+// lg: 1024px;
+// xl: 1200px;
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: var(--container-gutter);
+  background: var(--background);
+}
+
+.header {
+  margin-bottom: 3em;
+}
+
+.header__logo {
+  display: block;
+  width: 140px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.background {
+  display: none;
+  visibility: hidden;
+}
+
+.background--top {
+  right: -30px * 3;
+  top: -30px;
+}
+
+.background--bottom {
+  left: -30px * 3;
+  bottom: -30px;
+  transform: rotate(180deg);
+}
+
+.app {
+  position: relative;
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 1.6em;
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 18px 30px 0 rgba(#cfcfcf, .2);
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    padding: 30px * 2; //container-gutter * 2
+  }
+
+  .app {
+    padding: 4em 5em;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .background {
+    position: absolute;
+    width: 350px;
+    height: auto;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
+}

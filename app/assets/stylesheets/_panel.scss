@@ -1,0 +1,122 @@
+.panel {
+  border-radius: 5px;
+  padding: 2em;
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, .07);
+}
+
+.panel__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  padding-bottom: 2em;
+  border: 0;
+  border-bottom: 1px solid var(--alto);
+  border-style: dashed;
+}
+
+.panel__details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  position: relative;
+  padding-top: 2em;
+}
+
+.panel__details::before,
+.panel__details::after {
+  position: absolute;
+  top: -15px;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background: var(--white);
+  box-shadow: inset 0 -7px 5px 0 rgba(0, 0, 0, .02);
+  content: '';
+}
+
+.panel__details::before {
+  left: calc(-15px - 2em);
+  transform: rotate(-90deg);
+}
+
+.panel__details::after {
+  right: calc(-15px - 2em);
+  transform: rotate(90deg);
+}
+
+.panel__heading {
+  margin-left: 1em;
+}
+
+.panel__link {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.panel__title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color .2s ease-in-out;
+  color: var(--accent);
+}
+
+.panel__title:hover {
+  opacity: .9;
+  text-decoration: underline;
+}
+
+.panel__price {
+  margin-left: auto;
+  font-size: 1.2rem;
+}
+
+.panel__text {
+ font-size: .875rem;
+ font-weight: 300;
+ color: var(--oslo-gray);
+}
+
+.panel__image {
+  width: 40px;
+  height: 40px;
+}
+
+.panel__icons {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.panel__icon {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  border-radius: 100%;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, .05);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.panel__icon:nth-child(odd) {
+  background-image: url('image-placeholder-small-blue.svg');
+}
+
+.panel__icon:nth-child(even) {
+  background-image: url('image-placeholder-small-green.svg');
+}
+
+.panel__icon:nth-child(n + 2) {
+  margin-right: -1.2em;
+}
+
+.panel__counter {
+  order: -1;
+  color: var(--oslo-gray);
+  text-align: center;
+  padding: .7em;
+}

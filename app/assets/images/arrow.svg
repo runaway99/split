@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Header/WithArrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(0.000000, -7.000000)">
+        <g fill="#28F1AB" id="Icons/BackArrow">
+            <g transform="translate(0.000000, 7.000000)">
+                <g id="Shape">
+                    <polygon fill-rule="nonzero" points="30 13.125 7.125 13.125 17.625 2.625 15 0 0 15 15 30 17.625 27.375 7.125 16.875 30 16.875"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

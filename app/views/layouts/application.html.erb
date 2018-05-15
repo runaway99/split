@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Split</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+    <title>Splitt App</title>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= csrf_meta_tags %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+
+    <div class="app">
+      <%= image_tag ("background-shape.png"), class: "background background--top", alt: "background image" %>
+
+      <%= image_tag ("background-shape.png"), class: "background background--bottom", alt: "background image" %>
+
+      <header class="header">
+        <%= link_to "/", class:" header__logo" do %>
+          <%= image_tag "logo.svg", class:"header__logo" %>
+        <% end %>
+      </header>
+
+      <main>
+        <%= yield %>
+      </main>
+    </div>
   </body>
 </html>

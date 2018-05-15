@@ -1,0 +1,21 @@
+<article class="panel <%= local_assigns[:classes].present? ? classes : '' %>">
+  <header class="panel__header">
+    <%= image_tag 'icon-coin.svg', class: "panel__image" %>
+
+    <div class="panel__heading">
+      <h3 class="panel__title"><%= bill.name %></h3>
+
+      <p class="panel__text">
+        <%= bill.created_at.strftime('%d') %>
+
+        <%= bill.created_at.strftime('%b') %>
+      </p>
+    </div>
+
+    <p class="panel__price"><%= bill.price %> PLN</p>
+  </header>
+
+  <section class="panel__details">
+
+  </section>
+</article>

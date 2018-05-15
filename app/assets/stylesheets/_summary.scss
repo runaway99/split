@@ -1,0 +1,30 @@
+.summary__heading {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 3em;
+}
+.summary__heading__title {
+  margin: 0;
+  margin-left: 1em;
+  color: var(--accent);
+  font-size: 1.87rem;
+  font-weight: 600;
+  letter-spacing: .5px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.summary__heading__list {
+  max-height: 800px;
+  margin-bottom: 2em;
+  padding: 2em / 2;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  border-top: 1px solid rgba(0, 0, 0, .05);
+  border-bottom: 1px solid rgba(0, 0, 0, .05);
+}
+
+.summary__heading__item + .summary__heading__item {
+  margin-top: 2em;
+}
