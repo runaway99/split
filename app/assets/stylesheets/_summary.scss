@@ -4,7 +4,7 @@
   align-items: center;
   margin-bottom: 3em;
 }
-.summary__heading__title {
+.summary__title {
   margin: 0;
   margin-left: 1em;
   color: var(--accent);
@@ -14,10 +14,10 @@
   -webkit-font-smoothing: antialiased;
 }
 
-.summary__heading__list {
+.summary__list {
   max-height: 800px;
   margin-bottom: 2em;
-  padding: 2em / 2;
+  padding: calc(2em / 2);
   overflow-x: hidden;
   overflow-y: scroll;
 
@@ -25,6 +25,6 @@
   border-bottom: 1px solid rgba(0, 0, 0, .05);
 }
 
-.summary__heading__item + .summary__heading__item {
+.summary__item + .summary__item {
   margin-top: 2em;
 }

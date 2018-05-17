@@ -1,0 +1,43 @@
+<section class="create">
+  <%= simple_form_for @bill, defaults: { input_html: { class: 'form__input' }, label_html: { class: 'form__label' }, wrapper_html: { class: 'form__field'} } do |f|%>
+    <div class="form">
+      <div class="form__part">
+        <h4 class="form__heading">Bill description</h4>
+
+        <div class="form__part form__part--flex">
+          <div class="form__field-wrapper form__field-wrapper--spaced">
+            <%= image_tag "icon-invoice.svg", class: "form__icon" %>
+
+            <%= f.input :name, placeholder: "eg. Cinema Tickets" %>
+          </div>
+
+          <div class="form__field-wrapper form__field-wrapper--spaced">
+            <%= f.input :price, placeholder: 'eg. 23.45' %>
+          </div>
+        </div>
+
+        <div class="form__field-wrapper">
+          <%= image_tag "icon-piggy-bank.svg", class: "form__icon" %>
+
+          <%= f.input :bank_account, placeholder: '48 1234 5678 980' %>
+        </div>
+      </div>
+
+      <div class="form__part">
+        <h4 class="form__heading">Additional Info</h4>
+
+        <div class="form__field-wrapper">
+          <%= image_tag "icon-notes.svg", class: "form__icon" %>
+
+          <%= f.input :description, placeholder: 'Notes' %>
+        </div>
+      </div>
+
+      <div class="form__actions">
+        <%= link_to 'cancel', bills_path, class: 'button button--flat'%>
+
+        <%= f.button :submit, class: 'button' %>
+      </div>
+    </div>
+  <% end %>
+</section>
