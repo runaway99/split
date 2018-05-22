@@ -7,14 +7,14 @@
   --alto: #d6d6d6;
   --oslo-gray: #878f92;
 
-  --border-color: $blue-robbon;
+  --border-color: var(--blue-robbon);
   --background: #f6f8f9;
   --primary: #f2f2f2;
   --white: white;
 
-  --accent: $blue-robbon;
-  --detail: $bright-turquoise;
-  --cancel: $alizarin-crimson;
+  --accent: var(--blue-robbon);
+  --detail: var(--bright-turquoise);
+  --cancel: var(--alizarin-crimson);
 
   --container-width: 800px;
   --container-gutter: 30px;
