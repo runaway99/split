@@ -28,6 +28,9 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'simple_form'
 gem 'pry-rails'
+gem 'jquery-rails'
+gem 'cocoon'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

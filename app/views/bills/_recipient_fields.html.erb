@@ -1,0 +1,9 @@
+<div class="form__part form__part--flex nested-fields">
+  <%= image_tag "image-placeholder-small-green", class: 'form__image' %>
+
+  <%= f.input :name, wrapper_html: { class: 'form__field form__field--spaced' }, placeholder: 'Name*' %>
+
+  <%= f.input :email, wrapper_html: { class: 'form__field form__field--spaced' }, placeholder: 'E-mail address*' %>
+
+  <%= link_to_remove_association 'remove', f, class: 'button button--cancel' %>
+</div>
