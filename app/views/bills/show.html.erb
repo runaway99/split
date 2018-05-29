@@ -1,0 +1,62 @@
+<article class="bill" id='<%= @bill.id %>'>
+  <header class="bill__header">
+    <%= link_to '', bills_path, class: 'button button--close bill__close' %>
+
+    <h1 class="bill__title"><%= @bill.name %></h1>
+
+    <h2 class="bill__subtitle"><%= @bill.price %></h2>
+
+    <div class="bill__flex-list">
+      <%= image_tag "icon-invoice.svg", class: "bill__icon"%>
+
+      <div>
+        <h2 class="bill__heading-small">Bill’s URL</h2>
+        <h3 class="bill__text"><%= bill_url(@bill.id) %></h3>
+      </div>
+    </div>
+  </header>
+
+  <% if @bill.bank_account.present? %>
+  <section class="bill__segment">
+    <h3 class="bill__heading-medium">Settle up</h3>
+
+    <div class="bill__flex-list">
+      <%= image_tag "icon-piggy-bank.svg", class: "bill__icon"%>
+
+      <div>
+        <h2 class="bill__heading-small">Backer’s account number</h2>
+        <h3 class="bill__text"><%= @bill.bank_account%></h3>
+      </div>
+    </div>
+  </section>
+  <% end %>
+
+  <section class="bill__segment">
+    <h4 class="bill__heading-medium">Recipients</h4>
+
+    <% if @bill.recipients.present? %>
+      <% prices = split_bill(@bill.price, @bill.recipients.count) %>
+      <ul>
+        <% @bill.recipients.each_with_index do |recipient, index| %>
+        <li class="bill__item">
+          <%= render 'recipient', recipient: recipient, index: index, prices: prices %>
+        </li>
+        <% end %>
+      </ul>
+    <% else %>
+    <p class="bill__text">No recipients added</p>
+    <% end %>
+  </section>
+
+  <section class="bill__segment">
+    <h4 class="bill__heading-medium">Additional information</h4>
+
+    <% if @bill.description %>
+      <p>
+        <%= @bill.description%>
+      </p>
+    <% else %>
+      <p class="bill__text">No description added</p>
+    <% end %>
+  </section>
+</article>

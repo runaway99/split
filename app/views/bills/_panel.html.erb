@@ -3,7 +3,7 @@
     <%= image_tag 'icon-coin.svg', class: "panel__image" %>
 
     <div class="panel__heading">
-      <h3 class="panel__title"><%= bill.name %></h3>
+      <h3 class="panel__title"><%= link_to bill.name, bill_path(bill.id)%></h3>
 
       <p class="panel__text">
         <%= bill.created_at.strftime('%d') %>
