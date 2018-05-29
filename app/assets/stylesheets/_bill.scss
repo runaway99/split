@@ -1,0 +1,51 @@
+.bill{
+	position: relative;
+
+}
+
+.bill__close{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.bill__header{
+	padding-bottom: 55px;
+	border: 0;
+	border-bottom: 1px solid var(--oslo-gray);
+	border-style: dashed;
+}
+
+.bill__segment{
+	margin-top: 55px;
+}
+
+.bill__text,
+.bill__heading-medium,
+.bill__heading-small,
+.bill__title,
+.bill__subtitle{
+	magrin: 0;
+}
+
+.bill__flex-list{
+	display: flex;
+	align-items: center;
+
+}
+
+.bill__icon{
+	margin-right: 30px;
+}
+
+.bill__heading-medium{
+	margin-bottom: 30px;
+}
+
+.bill__subtitle{
+	margin-bottom: 30px;
+}
+
+.bill__item + .bill__item{
+	margin-top:40px;
+}

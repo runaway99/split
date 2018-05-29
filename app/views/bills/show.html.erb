@@ -1,6 +1,6 @@
 <article class="bill" id='<%= @bill.id %>'>
   <header class="bill__header">
-    <%= link_to '', bills_path, class: 'button button--close bill__close' %>
+    <%= link_to 'x', bills_path, class: 'button button--cancel bill__close' %>
 
     <h1 class="bill__title"><%= @bill.name %></h1>
 
