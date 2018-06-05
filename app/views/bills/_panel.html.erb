@@ -16,6 +16,13 @@
   </header>
 
   <section class="panel__details">
-
+      <ul class="panel__icons">
+          <% bill.recipients.take(3).each do %>
+          <li class="panel__icon"> </li>
+          <% end %>
+          <% if bill.recipients.count > 3 %>
+          <li class="panel__counter">+<%= bill.recipients.count - 3 %> </li>
+          <% end %>
+      </ul>
   </section>
 </article>

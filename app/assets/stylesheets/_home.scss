@@ -1,0 +1,41 @@
+.home__action {
+  margin-top: 2em;
+}
+
+.home__depiction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home__description {
+  padding-top: 2em;
+  text-align: center;
+}
+
+.home__heading {
+  font-size: 1.2rem;
+}
+
+.home__text {
+  font-size: .8rem;
+  line-height: 1.5;
+  font-weight: 300;
+  color: var(--oslo-gray);
+}
+
+@media only screen and (min-width: 768px) {
+  .home__depiction {
+    flex-direction: row;
+    max-width: 80%;
+    margin: 5em auto;
+  }
+
+  .home__description {
+    padding-top: 0;
+    padding-left: 3em;
+    text-align: left;
+  }
+}
+

@@ -1,0 +1,25 @@
+<section class="home">
+  <figure class="home__depiction">
+    <%= image_tag "icon-welcome", class:"depiction__image" %>
+
+    <div class="home__description">
+      <p class="home__text">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      </p>
+
+      <%= link_to 'Create new bill', new_bill_path, class: "home__action button" %>
+    </div>
+  </figure>
+
+  <h4 class="home__heading">Recent bills:</h4>
+
+  <% if @bill.present? %>
+  <%= render 'panel', bill: @bill %>
+
+  <%= link_to 'Full bill history', '/bills', class: "button home__action" %>
+  <% else %>
+  <figure class="home__status">
+    <%= image_tag "icon-welcome", class:"depiction__image" %>
+  </figure>
+  <% end %>
+</section>

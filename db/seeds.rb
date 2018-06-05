@@ -11,5 +11,7 @@ bill2.recipients.create(name: "Kamil", email: "kamil@test.pl")
 bill2.recipients.create(name: "Michał", email: "michał@test.pl")
 bill3.recipients.create(name: "Bartosz", email: "bartosz@test.pl")
 bill3.recipients.create(name: "Dariusz", email: "dariusz@test.pl")
-
+bill3.recipients.create(name: "Maciek", email: "maciek@test.pl")
+bill3.recipients.create(name: "Stefan", email: "stefan@test.pl")
+bill3.recipients.create(name: "Marek", email: "marek@test.pl")
 puts"Bills created"
